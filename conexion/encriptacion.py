@@ -5,14 +5,8 @@
 # ============================================================
  
 from cryptography.fernet import Fernet;
- 
-# ⚠️ IMPORTANTE: Esta llave NUNCA debe cambiar después de guardar datos
-# Si la cambias, no podrás leer los datos ya encriptados en la BD
+
 LLAVE: bytes = b"mxsAtVo8HwXz_TzjVlsC7lluujOygUoObGRu8vql9eo=";
- 
-# Genera una llave válida la primera vez (corre esto una sola vez)
-# LLAVE = Fernet.generate_key()
-# print(LLAVE)  # copia y pega el resultado arriba
  
 fernet = Fernet(LLAVE);
  
